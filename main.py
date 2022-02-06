@@ -6,7 +6,7 @@ import sqlitedict_keyfunc as hk_dict
 from sqlitedict import SqliteDict
 from hk_fun import *
 import time
-
+import importlib
 
 def init_databases():
     #CHECK IF FUNCTION.DB EXIST IN DIRECTORY
@@ -53,10 +53,13 @@ def get_fullfunction(key):
 def create_hotkeys(key, func_name, func_arr):
     #write functions to hk_fun
     func_db.append_functions(func_arr,func_name)
+    #reload hk_fun.py
+    importlib.reload(hk_fun)
     #store functions in db
     func_db.add_hk_db(key, func_name, func_arr)
     #store functions to dict
-    hk_dict.save_hk_dict(key, func_name)
+    func_str = func_name
+    hk_dict.save_hk_dict(key, func_str)
 
 
 if __name__ == '__main__':
@@ -67,7 +70,7 @@ if __name__ == '__main__':
         #read libraries
         #add_hk
 
-        # create_hotkeys('<alt>+<ctrl>+f+1', 'volume_up', ["print('Volume Up')", "pyautogui.press('volumeup')"])
+        create_hotkeys('<alt>+<ctrl>+f+1', 'volume_up', ["print('Volume Up')", "pyautogui.press('volumeup')"])
 
         # # remove hk
         # remove_hotkey('<alt>+<ctrl>+f+1')

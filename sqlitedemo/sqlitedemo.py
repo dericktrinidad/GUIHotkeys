@@ -1,7 +1,7 @@
 from sqlitedict import SqliteDict
 from pynput import keyboard
-from HK_output import *
-
+# from HK_output import *
+import HK_output
 
 def add_hotkey(key, function_name):
 
@@ -19,6 +19,6 @@ def execute_hotkey():
         with keyboard.GlobalHotKeys(sqldict) as h:
             h.join()
 if __name__ == '__main__':
-    execute_hotkey()
+    # execute_hotkey()
     # remove_hotkey('<alt>+<ctrl>+f+1')
-    # add_hotkey('<ctrl>+1', function_1)
+    add_hotkey('<ctrl>+1', HK_output.function_1)
