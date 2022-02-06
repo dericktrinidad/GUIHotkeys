@@ -58,10 +58,12 @@ def create_hotkeys(key, func_name, func_arr):
     #store functions to dict
     hk_dict.save_hk_dict(key, func_name)
 
+
 if __name__ == '__main__':
     try:
         #create/check data bases
         init_databases()
+
         #read libraries
         #add_hk
 
@@ -73,7 +75,26 @@ if __name__ == '__main__':
         # remove_hotkey('<alt>+<ctrl>+f+2')
 
         # RUN_HOTKEYS
-        hk_dict.execute_hotkey()
+        # hk_dict.execute_hotkey()
 
     except IndexError as e:
         print(e)
+
+
+# #COMMENT OUT WHEN NOT USING
+# #snakviz tool to test runtime speed of code
+# def snakeviz():
+#     import cProfile
+#     import pstats
+#
+#     #enter any function here to test runtime speed
+#     with cProfile.Profile() as pr:
+#         # create_hotkeys('<alt>+<ctrl>+f+1', 'volume_up', ["print('Volume Up')", "pyautogui.press('volumeup')"])
+#         remove_hotkey('<alt>+<ctrl>+f+1')
+#     stats = pstats.Stats(pr)
+#     stats.sort_stats(pstats.SortKey.TIME)
+#     #stats.print_stats()
+#     #dump stats as a file
+#     stats.dump_stats(filename='main.prof')
+#     #EXICUTE DUMP FILE WITH FOLLOWING COMMANDS:
+#     #snakeviz ./main.prof
