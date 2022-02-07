@@ -34,6 +34,8 @@ def remove_hotkey(key):
     hk_dict.remove_hk_dict(key)
     #print function in hk_fun.py
     func_db.update_hk_functions()
+    # reload hk_fun.py
+    importlib.reload(sys.modules['hk_fun'])
 
 
 #FUTURE GUI: display all hotkeys in database
@@ -77,7 +79,7 @@ if __name__ == '__main__':
         # remove_hotkey('<alt>+<ctrl>+f+2')
 
         # RUN_HOTKEYS
-        hk_dict.execute_hotkey()
+        # hk_dict.execute_hotkey()
 
     except IndexError as e:
         print(e)
