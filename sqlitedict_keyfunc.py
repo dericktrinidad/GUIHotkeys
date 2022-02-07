@@ -1,15 +1,15 @@
 from sqlitedict import SqliteDict
 # from pynput import keyboard
 import pynput
-from hk_fun import *
-
+# from hk_fun import *
+import hk_fun
 def init_sqlitedict():
     with SqliteDict('sqlitedict.db') as sqldict:
         sqldict.close()
 
 def save_hk_dict(key, function_name):
     with SqliteDict('sqlitedict.db') as sqldict:
-        sqldict[key] = eval(function_name)
+        sqldict[key] = eval('hk_fun.' + function_name)
         sqldict.commit()
     return True
 

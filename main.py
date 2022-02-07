@@ -4,9 +4,9 @@ import os.path
 import sqlite3_opfuncs as func_db
 import sqlitedict_keyfunc as hk_dict
 from sqlitedict import SqliteDict
-from hk_fun import *
 import time
 import importlib
+import sys
 
 def init_databases():
     #CHECK IF FUNCTION.DB EXIST IN DIRECTORY
@@ -54,12 +54,11 @@ def create_hotkeys(key, func_name, func_arr):
     #write functions to hk_fun
     func_db.append_functions(func_arr,func_name)
     #reload hk_fun.py
-    importlib.reload(hk_fun)
+    importlib.reload(sys.modules['hk_fun'])
     #store functions in db
     func_db.add_hk_db(key, func_name, func_arr)
     #store functions to dict
-    func_str = func_name
-    hk_dict.save_hk_dict(key, func_str)
+    hk_dict.save_hk_dict(key, func_name)
 
 
 if __name__ == '__main__':
@@ -70,15 +69,15 @@ if __name__ == '__main__':
         #read libraries
         #add_hk
 
-        create_hotkeys('<alt>+<ctrl>+f+1', 'volume_up', ["print('Volume Up')", "pyautogui.press('volumeup')"])
-
+        # create_hotkeys('<alt>+<ctrl>+f+1', 'volume_up', ["print('Volume Up')", "pyautogui.press('volumeup')"])
+        # create_hotkeys('<alt>+<ctrl>+f+2', 'volume_down', ["print('Volume Down')", "pyautogui.press('volumedown')"])
         # # remove hk
         # remove_hotkey('<alt>+<ctrl>+f+1')
         # # remove_hk2
         # remove_hotkey('<alt>+<ctrl>+f+2')
 
         # RUN_HOTKEYS
-        # hk_dict.execute_hotkey()
+        hk_dict.execute_hotkey()
 
     except IndexError as e:
         print(e)

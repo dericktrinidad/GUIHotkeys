@@ -19,6 +19,6 @@ def execute_hotkey():
         with keyboard.GlobalHotKeys(sqldict) as h:
             h.join()
 if __name__ == '__main__':
-    # execute_hotkey()
+    execute_hotkey()
     # remove_hotkey('<alt>+<ctrl>+f+1')
-    add_hotkey('<ctrl>+1', HK_output.function_1)
+    # add_hotkey('<ctrl>+1', HK_output.function_1)
