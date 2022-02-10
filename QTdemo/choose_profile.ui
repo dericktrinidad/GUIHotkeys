@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="main_widget" native="true">
+  <widget class="QWidget" name="create_window" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -23,15 +23,15 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget#widget{
+    <string notr="true">QWidget#create_window{
 background-color:qlineargradient(spread:pad, x1:0.977409, y1:0.069, x2:0.977318, y2:0.983, stop:0.4375 rgba(189, 229, 225, 255), stop:1 rgba(255, 255, 255, 255));}</string>
    </property>
    <widget class="QLabel" name="welcome">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>300</x>
       <y>30</y>
-      <width>531</width>
+      <width>631</width>
       <height>121</height>
      </rect>
     </property>
@@ -40,7 +40,7 @@ background-color:qlineargradient(spread:pad, x1:0.977409, y1:0.069, x2:0.977318,
 font: 72pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Edit Hotkeys</string>
+     <string>Choose Profile</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -48,7 +48,7 @@ font: 72pt &quot;MS Shell Dlg 2&quot;;</string>
      <rect>
       <x>450</x>
       <y>130</y>
-      <width>361</width>
+      <width>311</width>
       <height>51</height>
      </rect>
     </property>
@@ -60,7 +60,7 @@ font: 26pt &quot;MS Shell Dlg 2&quot;;</string>
      <string>Personalize Hotkeys</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="edit_profile_btn">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -79,7 +79,7 @@ background-color:rgb(248, 135, 103);</string>
      <string>Edit Profile</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="create_profile_btn">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -98,7 +98,7 @@ background-color:rgb(248, 135, 103);</string>
      <string>Create Profile</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="delete_profile_btn">
     <property name="geometry">
      <rect>
       <x>810</x>
@@ -120,15 +120,34 @@ background-color:rgb(248, 135, 103);</string>
    <widget class="QWidget" name="profile_box" native="true">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>140</x>
       <y>200</y>
-      <width>641</width>
+      <width>621</width>
       <height>491</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">border-radius:30px;
 background-color:rgb(211, 211, 211);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back_btn">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:20px;
+color:white;
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color:rgb(248, 135, 103);</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
     </property>
    </widget>
   </widget>

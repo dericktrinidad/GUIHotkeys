@@ -52,6 +52,8 @@ def get_fullfunction(key):
             return function
         else:
             print("function does not exist")
+
+
 def create_hotkeys(key, func_name, func_arr):
     #write functions to hk_fun
     func_db.append_functions(func_arr,func_name)

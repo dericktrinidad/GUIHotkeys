@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="main_widget" native="true">
+  <widget class="QWidget" name="edithk_widget" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget#widget{
+    <string notr="true">QWidget#edithk_widget{
 background-color:qlineargradient(spread:pad, x1:0.977409, y1:0.069, x2:0.977318, y2:0.983, stop:0.4375 rgba(189, 229, 225, 255), stop:1 rgba(255, 255, 255, 255));}</string>
    </property>
    <widget class="QLabel" name="welcome">
