@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1196</width>
-    <height>794</height>
+    <width>1158</width>
+    <height>844</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -307,7 +307,7 @@ background-color:rgb(248, 135, 103);</string>
      <string>Back</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="input_le">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -317,7 +317,7 @@ background-color:rgb(248, 135, 103);</string>
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="output_le">
     <property name="geometry">
      <rect>
       <x>540</x>
