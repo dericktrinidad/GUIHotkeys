@@ -40,30 +40,30 @@ class HotkeyWidget(QDialog):
         super(HotkeyWidget, self).__init__()
         loadUi("hotkeys.ui", self)
         self.back_btn.clicked.connect(self.go_back)
-        # inputs
-        self.up_key.connect(self.in_up_key)
-        self.dn_key.connect(self.in_dn_key)
-        self.lt_key.connect(self.in_lt_key)
-        self.rt_key.connect(self.in_rt_key)
-    # widget controls
+    #     # inputs
+    #     self.up_key.connect(self.in_up_key)
+    #     self.dn_key.connect(self.in_dn_key)
+    #     self.lt_key.connect(self.in_lt_key)
+    #     self.rt_key.connect(self.in_rt_key)
+    # # widget controls
     def go_back(self):
         widget.setCurrentIndex(widget.currentIndex() - 1)
-    def add_hk(self):
-        pass
-    def del_hk(self):
-        pass
-    def run(self):
-        pass
-
-    # keyboard inputs
-    def in_up_key(self):
-        pass
-    def in_dn_key(self):
-        pass
-    def in_lt_key(self):
-        pass
-    def in_rt_key(self):
-        pass
+    # def add_hk(self):
+    #     pass
+    # def del_hk(self):
+    #     pass
+    # def run(self):
+    #     pass
+    #
+    # # keyboard inputs
+    # def in_up_key(self):
+    #     pass
+    # def in_dn_key(self):
+    #     pass
+    # def in_lt_key(self):
+    #     pass
+    # def in_rt_key(self):
+    #     pass
 
 # class RunProfile(QDialog):
 #     def __init__(self):
